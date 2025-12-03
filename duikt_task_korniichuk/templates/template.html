@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Information</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        .container { width: 80%; margin: auto; }
+        ul { list-style: none; padding: 0; }
+        li { background: white; margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .car-make { font-weight: bold; }
+        .car-details { color: #555; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Car Information</h1>
+    <ul>
+        {% for car in cars %}
+        <li>
+            <span class="car-make">{{ car.CAR_BRAND.BRAND_NAME }} {{ car.CAR_NAME }} ({{ car.CAR_MODEL }})</span>
+            -
+            <span class="car-details">${{ car.CAR_PRICE }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
